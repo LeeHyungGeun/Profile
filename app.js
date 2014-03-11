@@ -16,7 +16,7 @@ app.configure(function(){
 });
 
 app.get('/', function(req, res){
-    res.render('index.html');
+    res.render('profile.html');
 });
 
 server.listen(port, function(){
