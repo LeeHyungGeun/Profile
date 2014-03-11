@@ -1,0 +1,123 @@
+body{
+    background:gray;
+}
+a{
+    text-decoration:none;
+}
+#contents{
+    width:1020px;
+    margin:0 auto;
+}
+.subtitle{
+    font:inherit;
+    font-size:20px;
+    vertical-align:baseline;
+    font-color:black;
+    font-weight:bold;
+}
+.intro_text{
+    font:inherit;
+    font-size:15px;
+    vertical-align:baseline;
+    font-color:gray;
+    line-height:18px;
+}
+.profile-card{
+    float:left;
+}
+.profile-top-card{
+    background:#fff;
+    -webkit-box-shadow:0 1px 1px rgba(0,0,0,0.15),-1px 0 0 rgba(0,0,0,0.03),1px 0 0 rgba(0,0,0,0.03),0 1px 0 rgba(0,0,0,0.12);
+    box-shadow:0 1px 1px rgba(0,0,0,0.15),-1px 0 0 rgba(0,0,0,0.03),1px 0 0 rgba(0,0,0,0.03),0 1px 0 rgba(0,0,0,0.12);
+    margin-top:0px;
+    margin-bottom:10px;
+}
+.top-card{
+    position:relative;
+    font-size:12px;
+}
+.profile-card .profile-picture{
+    position:relative;
+    z-index:1;
+    background:#f4f4f4;
+    float:left;
+    width:200px;
+    height:200px;
+    line-height:199px;
+    text-align:center;
+    margin-top:20px;
+    margin-bottom:20px;
+    overflow:hidden;
+}
+.profile-card .profile-picture img{
+    vertical-align:middel;
+    -webkit-box-shadow:0 0 5px 0 rgba(0,0,0,0.1),0 0 0 1px #f4f4f4;
+    box-shadow:0 0 5px 0 rgba(0,0,0,0.1),0 0 0 1px #f4f4f4;
+}
+.profile-card h1{
+    font-size:24px;
+    font-weight:bold;
+    line-height:26px;
+    color:#000;
+}
+.profile-card .title{
+    font-size:16px;
+    line-height:20px;
+    color:#333;
+    font-weight:normal;
+    padding-top:1px;
+    padding-bottom:1px;
+    display:inline;
+}
+.profile-card .line{
+    margin: 2px 0;
+    font-size: 13px;
+    line-height:17px;
+    color:#666;
+    font-weight:normal;
+}
+.profile-card .line dl, dt, dd{
+    display:inline;
+}
+.profile-picture{
+    position:relative;
+    z-index:1;
+    background:#f4f4f4;
+    flaot:left;
+    width:200px;
+    height:220px;
+    line-height:199px;
+    text-align:center;
+    margin-top:20px;
+    margin-bottom:20px;
+    overflow:hidden;
+}
+.profile-overview{
+    position:relative;
+    z-index:5;
+    float:right;
+    width:820px;
+    height:200px;
+    margin-top:20px;
+    margin-bottom:20px;
+    background:#f4f4f4;
+    word-wrap:break-word;
+}
+.profile-overview-content{
+    width:100%;
+    min-height:149px;
+    height:auto;
+    padding-top:20px;
+    padding-bottom:15px;
+}
+.account-icons{
+    float:right;
+    margin:0 0 0 10px;
+    position:relative;
+    z-index:1;
+}
+.content{
+    float:left;
+    background:white;
+    padding:10px 10px 10px 10px;
+}
