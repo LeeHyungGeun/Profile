@@ -16,7 +16,7 @@ app.configure(function(){
 });
 
 app.get('/', function(req, res){
-    res.render('profile.html');
+    res.render('qitingting.html');
 });
 
 server.listen(port, function(){

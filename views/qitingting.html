@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Charset-Type" charset="EUC-KR">
+    <title></title>
+
+</head>
+<body>
+
+</body>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+var xhr = new XMLHttpRequest(),
+    path = '/text/이형근수정본.txt';
+
+    xhr.open('GET', path, false);
+    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded; charset=UTF-8');
+    xhr.onreadystatechange = function(){
+        if(xhr.readyState === 4){
+            var source = xhr.responseText;
+            source = source.replace(/\r/gi, '<br />');
+
+            console.log(source);
+            $('body').html(source.toString('utf-8'));
+        }
+    }
+    xhr.send();
+
+</script>
+</html>
+
