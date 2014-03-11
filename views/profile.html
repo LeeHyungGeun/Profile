@@ -3,55 +3,13 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
-    <!--<link rel="stylesheet" href="/css/reset.css"/>-->
-    <!--<style>-->
-        <!--#background {-->
-            <!--padding-top: 20px;-->
-            <!--padding-bottom: 0px;-->
-            <!--background: #fff;-->
-            <!---webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.15),-1px 0 0 rgba(0,0,0,0.03),1px 0 0 rgba(0,0,0,0.03),0 1px 0 rgba(0,0,0,0.12)-->
-            <!---box-shadow:0 1px 1px rgba(0,0,0,0.15),-1px 0 0 rgba(0,0,0,0.03),1px 0 0 rgba(0,0,0,0.03),0 1px 0 rgba(0,0,0,0.12)-->
-            <!--padding-left:20px;-->
-            <!--padding-right:20px;-->
-            <!--margin-top:10px;-->
-            <!--margin-bottom:10px;-->
-            <!--position:relative;-->
-        <!--}-->
-        <!--..profile-activity h2, .profile-background h2, .profile-endorsements h2, .profile-groups h2, .profile-following h2, .profile-connections h2, .profile-your-notes h2{-->
-            <!--margin-top: -20px;-->
-            <!--margin-bottom: 0px;-->
-            <!--margin-left: -20px;-->
-            <!--margin-right: 0px;-->
-            <!--padding-top: 9px;-->
-            <!--padding-bottom: 7px;-->
-            <!--padding-left: 20px;-->
-            <!--padding-right: 20px;-->
-            <!--background: #333;-->
-            <!--color: #fff;-->
-            <!--font-size: 13px;-->
-            <!--line-height: 17px;-->
-            <!--font-weight: bold;-->
-            <!--padding: 7.5px 20px;-->
-            <!--display: inline-block;-->
-            <!--zoom: 1;-->
-            <!--vertical-align: top;-->
-        <!--}-->
-        <!--.background-section, .background-section-drag-proxy{-->
-            <!--font-size: 13px;-->
-            <!--line-height: 17px;-->
-            <!--color: #333;-->
-            <!--font-weight: normal;-->
-            <!--position: relative;-->
-        <!--}-->
-        <!--#aux {-->
-            <!--margin-left: 10px;-->
-            <!--float: left;-->
-            <!--width: 318px;-->
-            <!--word-wrap: break-word;-->
-        <!--}-->
-
-    <!--</style>-->
     <style>
+        body{
+            background:gray;
+        }
+        #contents{
+            width:1020px;
+        }
         .subtitle{
             font:inherit;
             font-size:20px;
@@ -64,143 +22,324 @@
             font-size:15px;
             vertical-align:baseline;
             font-color:gray;
+            line-height:18px;
         }
-        /*.category_title{*/
-            /*font-size:16px;*/
-        /*}*/
+        .profile-card{
+            float:left;
+        }
+        .profile-top-card{
+            background:#fff;
+            -webkit-box-shadow:0 1px 1px rgba(0,0,0,0.15),-1px 0 0 rgba(0,0,0,0.03),1px 0 0 rgba(0,0,0,0.03),0 1px 0 rgba(0,0,0,0.12);
+            box-shadow:0 1px 1px rgba(0,0,0,0.15),-1px 0 0 rgba(0,0,0,0.03),1px 0 0 rgba(0,0,0,0.03),0 1px 0 rgba(0,0,0,0.12);
+            margin-top:0px;
+            margin-bottom:10px;
+        }
+        .top-card{
+            position:relative;
+            font-size:12px;
+        }
+        .profile-card .profile-picture{
+            position:relative;
+            z-index:1;
+            background:#f4f4f4;
+            float:left;
+            width:200px;
+            height:200px;
+            line-height:199px;
+            text-align:center;
+            margin-top:20px;
+            margin-bottom:20px;
+            overflow:hidden;
+        }
+        .profile-card .profile-picture img{
+            vertical-align:middel;
+            -webkit-box-shadow:0 0 5px 0 rgba(0,0,0,0.1),0 0 0 1px #f4f4f4;
+            box-shadow:0 0 5px 0 rgba(0,0,0,0.1),0 0 0 1px #f4f4f4;
+        }
+        .profile-card h1{
+            font-size:24px;
+            font-weight:bold;
+            line-height:26px;
+            color:#000;
+        }
+        .profile-card .title{
+            font-size:16px;
+            line-height:20px;
+            color:#333;
+            font-weight:normal;
+            padding-top:1px;
+            padding-bottom:1px;
+            display:inline;
+        }
+        .profile-card .line{
+            margin: 2px 0;
+            font-size: 13px;
+            line-height:17px;
+            color:#666;
+            font-weight:normal;
+        }
+        .profile-card .line dl, dt, dd{
+            display:inline;
+        }
+        .profile-picture{
+            position:relative;
+            z-index:1;
+            background:#f4f4f4;
+            flaot:left;
+            width:200px;
+            height:220px;
+            line-height:199px;
+            text-align:center;
+            margin-top:20px;
+            margin-bottom:20px;
+            overflow:hidden;
+        }
+        .profile-overview{
+            position:relative;
+            z-index:5;
+            float:right;
+            width:820px;
+            height:200px;
+            margin-top:20px;
+            margin-bottom:20px;
+            background:#f4f4f4;
+            word-wrap:break-word;
+        }
+        .profile-overview-content{
+            width:100%;
+            min-height:149px;
+            height:auto;
+            padding-top:20px;
+            padding-bottom:15px;
+        }
+        .account-icons{
+            float:right;
+            margin:0 0 0 10px;
+            position:relative;
+            z-index:1;
+        }
+        .content{
+            float:left;
+            background:white;
+            padding:10px 10px 10px 10px;
+        }
     </style>
 </head>
 <body>
+
     <div id="contents">
-        <span class="subtitle">간단한 프로필</span>
-        <p class="intro_text">
-            <b>Web Developer</b><br/>
-            - Database (MS-SQL)<br/>
-            - Server side (ASP.NET 4.0, MVC3, MVC4)<br/>
-            - Client side (jQuery, UnderscoreJS, KnockoutJS, JsRender, Twitter Bootstrap, KendoUI, WijmoUI)<br/>
-            - for 2 years in WICOZ&ETHEREAL<br/>
-        </p>
-        <span class="subtitle">경력 사항</span>
-        <p class="intro_text">
-            <b>WIZCOZ&ETHEREAL</b><br/>
-            2012년 04월 ~ 현재<br/>
-            - 개발사이트<br/>
-            Wizwell Mobile: <a href="http://m.wizwell.co.kr">http://m.wizwell.co.kr</a> (메인으로 전체 개발)<br/>
-            기간: 2014년 01월 ~ 2014년 03월(기획:1개월, 디자인:1개월, 프로그래밍:1개월)<br/>
-            - Server side: ASP.NET 4.0, MVC4, SignalR<br/>
-            - Client side: jQuery, jQueryMobile, jQueryUI, UnderscoreJS<br/>
-            - Database: MS-SQL<br/>
-            AmazingCut: <a href="http://www.amazingcut.co.kr">http://www.amazingcut.co.kr</a> (메인으로 전체 개발)<br/>
-            기간: 2013년 05월(기획:1주, 디자인:1주, 프로그래밍:1주)<br/>
-            - Server side: ASP.NET 4.0, MVC3<br/>
-            - Client side: jQuery, jQueryUI, KendoUI<br/>
-            - Database: MS-SQL<br/>
-            CalorieSafe: <a href="http://www.caloriesafe.com">http://www.caloriesafe.com</a> (메인으로 전체 개발)<br/>
-            기간: 2013년 01월 ~ 2013년 04월(기획:1개월, 디자인:1개월, 프로그래밍:2개월)<br/>
-            - Server side: ASP.NET 4.0, MVC3<br/>
-            - Client side: jQuery, jQueryUI, UnderscoreJS, KendoUI, WijmoUI, Twitter Bootstrap<br/>
-            - Database: MS-SQL<br/>
-            SKIN79 Brand: <a href="http://www.skin79.com">http://www.skin79.com</a> (서브로 왼쪽 메뉴 BRAND, GLOBAL, PR, Shopping 부분 개발)<br/>
-            기간: 2012년 09월 ~ 2012년 12월(기획:2개월, 디자인:2개월, 프로그래밍:2개월)<br/>
-            - Server side: ASP.NET 4.0, MVC3<br/>
-            - Client side: jQuery<br/>
-            - Database: MS-SQL<br/>
-            SKIN79: <a href="http://www.skin79mall.com">http://www.skin79mall.com</a> (유지보수 및 관리자 개발)<br/>
-            기간: 2012년 04월 ~ 2012년 08월(기획:3개월, 디자인:3개월, 프로그래밍:5개월)<br/>
-            - Server side: ASP.NET 4.0, MVC3<br/>
-            - Client side: jQuery, jQueryUI, KnockoutJS, JsRender<br/>
-            - Database: MS-SQL<br/>
-        </p>
-        <span class="subtitle">프로젝트</span>
-        <p class="intro_text">
-            중국회사(163.com) 면접 프로젝트<br/>
-            기간: 2013년 10월(1주)<br/>
-            주소: <a href="http://NetEase.azurewebsites.net">http://NetEase.azurewebsites.net</a><br/>
-            소개: 163.com 에 취업을 하고자 1주일간 개발<br/>
-            기술: 호스팅(Windows Azure IIS 8.0)<br/>
-            서버 사이드(Node.js, Express 3.0)<br/>
-            클라이언트 사이드(AngualrJS)<br/>
-            데이터에비스(MongoDB)<br/>
-        </p>
-        <span class="subtitle">보유 기술 & 전문 분야</span>
-        <p class="intro_text">
-            Top 5 순위<br/>
-            1. ASP.NET<br/>
-            2. JavaScript<br/>
-            3. Node.js<br/>
-            4. MS-SQL<br/>
-            5. MongoDB<br/>
-        </p>
-        <span class="subtitle">학력 사항</span>
-        <p class="intro_text">
-            학교: Kwanwoon University<br/>
-            전공: Education Games 석사<br/>
-            논문: Node.js를 활용한 웹 성능 분석<br/>
-            소개: (Node.js + Express 3.0 + MongoDB)와 (ASp.NET4.0, SignalR2.0, MS-SQL)의 CRUD(Create, Read, Update, Delete)의 성능분석에 대한 논문을 썼습니다.<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;앞의 (Node.js + Express 3.0 + MongoDB)가 뒤의 (ASP.NET4.0, SignalR2.0, MS-SQL)보다 평균적으로 7배 가까이 빨랏습니다.<br/>
-            기간: 2008 ~ 2013<br/>
-            학교: Seoul Hoseo Colleague<br/>
-            전공: Game Development (Multimedia 학사)<br/>
-            기간: 2006 ~ 2008<br/>
-            소개: 게임프로그래밍에 관련된, C, C++, DirectX 및 포토샵, 일러스트레이터, 사운드 포지 등에 대해 배웠습니다.<br/>
-        </p>
-        <span class="subtitle">관심 분야</span>
-        <p class="intro_text">
-            1. SPA(Single Page App)<br/>
-            2. Node.js: <a href="http://nodejs.org/">http://nodejs.org/</a><br/>
-            3. AngularJS: <a href="http://www.angularjs.org/">http://www.angularjs.org/</a><br/>
-            4. MEAN: <a href="http://www.mean.io/">http://www.mean.io/</a><br/>
-            5. MongoDB: <a href="http://www.mongodb.org/">http://www.mongodb.org/</a><br/>
-        </p>
-        <span class="subtitle">추천서</span>
-        <p class="intro_text">
-            1. 자바스크립트 완벽가이드, 저:데이비드 플래너건<br/>
-            2. 더글라스 크락포드의 자바스크립트 핵심가이드, 저:더글라스 크락포드<br/>
-            3. 함수형 자바스크립트 - 새롭고 올바른 자바스크립트 프로그래밍 기법, 저:마이클 포거스<br/>
-            4. 자바스크립트 코딩 기법과 핵심 패턴, 저: 스토얀 스테파노프<br/>
-            5. 제대로 배우는 node.js 프로그래밍, 저:셀리 파워즈<br/>
-        </p>
-        <span class="subtitle">읽고싶은 도서</span>
-        <p class="intro_text">
-            1. Data Structure and algorithm, 저:Mark A. Weiss<br/>
-            2. TCP/IP Illustrated, Vol. 1: The Protocols (Addison-Wesley Professional Computing Series), 저: W. Richard Stevens<br/>
-            3. HTTP: The Definitive Guide (Definitive Guides), 저: David Gourley<br/>
-            4. A First Course in Database System (3rd Edition), 저: Jeffrey D. Ullman<br/>
-            5. Structure and Interpretation of Computer Programs - 2nd Edition (MIT Electrical Engineering and Computer Science, 저: Harold Abelson<br/>
-        </p>
-        <span class="subtitle">참관한 컨퍼런스</span>
-        <p class="intro_text">
-            제목: huJs 2012<br/>
-            일시: 2012년09월10일 ~ 2012년09월12일<br/>
-            장소: 중국 상하이<br/>
-            내용: 중국에서 열린 첫 번째 자바스크립트 컨퍼런스<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KnockoutJS의 개발자 Steven Sanderson, Nodejitsu의 Co-Founder & CEO인 Charile Robbins, 163.com의 Charlie Crane등을 만나봤고 지금도 교류를 하고 있습니다.
-        </p>
-        <span class="subtitle">교육 과정</span>
-        <p class="intro_text">
-            1. 게임프로그램개발 과정(6개월), 삼성 SDS<br/>
-            2. Silverlight 개발 과정(6개월), KOSTA<br/>
-            3. Windows 8 MetroUI App 프로그래밍(5일), KOSTA<br/>
-            4. ASp.NET MVC 4/web Platform프로그래밍(5일), KOSTA<br/>
-            5. ASp.NET SignalR Real-Time/Websocket(5일), KOSTA<br/>
-            6. javascript framework & C# 웹 개발자(5일), KOSTA<br/>
-            7. Single Page Application with Meteor.js and MongoDB(5일), KOSTA<br/>
-            8. Node.js + MongoDB개발자 프로그래밍(14일), KOSTA<br/>
-            9. Node.js + MongoDB개발자 프로그래밍(5일), KOSTA<br/>
-            10. Node.js + MongoDB개발자 프로그래밍(14일), KOSTA<br/>
-            11. BigData MongoDB(NoSQL) + Mongoos 프로그래밍(5일), KOSTA<br/>
-            12. BigData MongoDB(NoSQL) + Mongoos 프로그래밍(14일), KOSTA<br/>
-            13. Node.js, MongoDB, and Backbone/AngularJS/Ember MVC WebApp(5일), KOSTA<br/>
-            14. Building Web Apps with ASp.NET MVC4(5일), KOSTA<br/>
-            15. Node.js + MongoDB개발자 프로그래밍(5일), KOSTA<br/>
-            16. 자바스크립트 기초부터 jQuery까지(14일), KOSTA<br/>
-            17. Single Page Application with Meteor.js and Node.js+MongoDB(5일), KOSTA<br/>
-            18. BigData MongoDB(NoSQL) + Mongoose 프로그래밍(14일), KOSTA<br/>
-            19. BigDataMongoDB(NoSQL) + Mongoos / socket.io realTime(5일), KOSTA<br/>
-            20. Visual Studio2013 javascript design pattern(5일), KOSTA<br/>
-            21. 자바스크립트 & 개발패턴(5일), KOSTA<br/>
-            22. HTML5 - UX & 기술(14일), KOSTA<br/>
-        </p>
+        <!-- 상단박스 -->
+        <div class="profile-top-card top-card">
+            <div class="profile-card">
+                <div class="profile-picture">
+                    <img src="http://netease.azurewebsites.net/Contents/images/leehyunggeun.jpeg" width="80" height="80" alt="이형근">
+                </div>
+                <div class="profile-overview">
+                    <div class="profile-overview-content">
+                        <div>
+                            <div>
+                                <h1>
+                            <span>
+                                <span class="full-name">이형근</span>
+                            </span>
+                                </h1>
+                            </div>
+                            <div>
+                                <div class="editable-item">
+                                    <p class="title">Web Programmer - WIZCOZ</p>
+                                </div>
+                            </div>
+                            <div class="line">
+                                <dt>이름</dt>
+                                <dd>
+                                    <span>
+                                        이형근
+                                    </span>
+                                </dd>
+                            </div>
+                            <div class="line">
+                                <dt>나이</dt>
+                                <dd>
+                                    <span>
+                                        28세(1987년08월07일)
+                                    </span>
+                                </dd>
+                            </div>
+                            <div class="line">
+                                <dt>직장</dt>
+                                <dd>
+                                    <span>
+                                        WIZCOZ(2012년04월 ~ 현재)
+                                    </span>
+                                </dd>
+                            </div>
+                            <div class="line">
+                                <dt>학력</dt>
+                                <dd>
+                                    <span>
+                                        광운대학교 대학원 교육용게임개발전공(석사)
+                                    </span>
+                                </dd>
+                            </div>
+                            <div class="line">
+                                <dt>지역</dt>
+                                <dd>
+                                    <span>
+                                        대한민국 서울
+                                    </span>
+                                </dd>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 하단 내용 -->
+        <div class="content">
+            <span class="subtitle">소개</span>
+            <p class="intro_text">
+                &nbsp;&nbsp;새로운 기술에 관심이 많습니다. 처음에는 Silverlight로 시작을 했지만 ASP.NET을 타고 Node.js까지 관심 영역을 옮겨왓고 현재는 Front-end의 중요성
+                을 느끼고 JavaScript에 관심이 많아 졌습니다. 그리고 웹 개발등 SPA(Single Page App)개발을 위해서는 프레임워크의 필요성을 느껴 여러 프레임워크를 써보았지
+                만 AngularJS만한 것이 없다고 생각합니다. AngularJS의 장점으로는 FULL SPA Framework일 뿐만 아니라, $scope서비스, directive서비스 등의 특징이 있고 현재는
+                AngularJS UI가 나왔고 모바일 쪽에서도 많은 라이브러리 들이 추가로 개발되고 있습니다.<br/>
+                &nbsp;&nbsp;맡은 임무가 생기면 그 임무를 정확히 지키는 어떻게 해서든 해내는 근성도 가지고 있으며 앞으로 발전하려는 의지가 많아 노력을 많이 합니다.<br/>
+                &nbsp;&nbsp;개인적인 취미로는 독서와 여행하기 입니다. 그리고 언어에도 관심이 많아 매일 중국어 학원에도 다니고 있으며 중국에서 3년간 생활이 있어 꽤 잘 합니다. 짧은
+                기간을 같이 일하더라도 서로가 발전이 되었으면 좋겠으며 다른 사람과 융합하는 과정에서 내 자신이 지금보다 더 큰 컴포넌트로 성장할 수 있었으면 좋겠습니다.
+                마지막으로 Easy 하지 않으면 기술이 아니라고 생각을 하기 때문에 마이크로소프트 처럼 기본 개발을 위해 엄청난 거대한 프레임워크를 구축하는 비용을 줄이고
+                MEAN Stack 처럼 간단한 연결만으로 모든것을 만들어 보고 싶습니다.
+            </p>
+            <span class="subtitle">간단한 프로필</span>
+            <p class="intro_text">
+                <b>Web Developer</b><br/>
+                - Database (MS-SQL)<br/>
+                - Server side (ASP.NET 4.0, MVC3, MVC4)<br/>
+                - Client side (jQuery, UnderscoreJS, KnockoutJS, JsRender, Twitter Bootstrap, KendoUI, WijmoUI)<br/>
+                - for 2 years in WICOZ<br/>
+            </p>
+            <span class="subtitle">경력 사항</span>
+            <p class="intro_text">
+                <b>WIZCOZ</b><br/>
+                2012년 04월 ~ 현재<br/>
+                - 개발사이트<br/>
+                Wizwell Mobile: <a target="_blank" href="http://m.wizwell.co.kr">http://m.wizwell.co.kr</a> (메인으로 전체 개발)<br/>
+                기간: 2014년 01월 ~ 2014년 03월(기획:1개월, 디자인:1개월, 프로그래밍:1개월)<br/>
+                - Server side: ASP.NET 4.0, MVC4, SignalR<br/>
+                - Client side: jQuery, jQueryMobile, jQueryUI, UnderscoreJS<br/>
+                - Database: MS-SQL<br/>
+                AmazingCut: <a target="_blank" href="http://www.amazingcut.co.kr">http://www.amazingcut.co.kr</a> (메인으로 전체 개발)<br/>
+                기간: 2013년 05월(기획:1주, 디자인:1주, 프로그래밍:1주)<br/>
+                - Server side: ASP.NET 4.0, MVC3<br/>
+                - Client side: jQuery, jQueryUI, KendoUI<br/>
+                - Database: MS-SQL<br/>
+                CalorieSafe: <a target="_blank" href="http://www.caloriesafe.com">http://www.caloriesafe.com</a> (메인으로 전체 개발)<br/>
+                기간: 2013년 01월 ~ 2013년 04월(기획:1개월, 디자인:1개월, 프로그래밍:2개월)<br/>
+                - Server side: ASP.NET 4.0, MVC3<br/>
+                - Client side: jQuery, jQueryUI, UnderscoreJS, KendoUI, WijmoUI, Twitter Bootstrap<br/>
+                - Database: MS-SQL<br/>
+                SKIN79 Brand: <a target="_blank" href="http://www.skin79.com">http://www.skin79.com</a> (서브로 왼쪽 메뉴 BRAND, GLOBAL, PR, Shopping 부분 개발)<br/>
+                기간: 2012년 09월 ~ 2012년 12월(기획:2개월, 디자인:2개월, 프로그래밍:2개월)<br/>
+                - Server side: ASP.NET 4.0, MVC3<br/>
+                - Client side: jQuery<br/>
+                - Database: MS-SQL<br/>
+                SKIN79: <a target="_blank" href="http://www.skin79mall.com">http://www.skin79mall.com</a> (유지보수 및 관리자 개발)<br/>
+                기간: 2012년 04월 ~ 2012년 08월(기획:3개월, 디자인:3개월, 프로그래밍:5개월)<br/>
+                - Server side: ASP.NET 4.0, MVC3<br/>
+                - Client side: jQuery, jQueryUI, KnockoutJS, JsRender<br/>
+                - Database: MS-SQL<br/>
+            </p>
+            <span class="subtitle">프로젝트</span>
+            <p class="intro_text">
+                중국회사(163.com) 면접 프로젝트<br/>
+                기간: 2013년 10월(1주)<br/>
+                주소: <a target="_blank" href="http://NetEase.azurewebsites.net">http://NetEase.azurewebsites.net</a><br/>
+                소개: 163.com 에 취업을 하고자 1주일간 개발<br/>
+                기술:<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;호스팅: Windows Azure IIS 8.0<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;서버 사이드: Node.js, Express 3.0<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;클라이언트 사이드: AngualrJS<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;데이터에비스: MongoDB<br/>
+            </p>
+            <span class="subtitle">보유 기술 & 전문 분야</span>
+            <p class="intro_text">
+                Top 5 순위<br/>
+                1. ASP.NET<br/>
+                2. JavaScript<br/>
+                3. Node.js<br/>
+                4. MS-SQL<br/>
+                5. MongoDB<br/>
+            </p>
+            <span class="subtitle">학력 사항</span>
+            <p class="intro_text">
+                학교: Kwanwoon University<br/>
+                전공: Education Games 석사<br/>
+                논문: Node.js를 활용한 웹 성능 분석<br/>
+                소개: (Node.js + Express 3.0 + MongoDB)와 (ASp.NET4.0, SignalR2.0, MS-SQL)의 CRUD(Create, Read, Update, Delete)의 성능분석에 대한 논문을 썼<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;습니다. 앞의 (Node.js + Express 3.0 + MongoDB)가 뒤의 (ASP.NET4.0, SignalR2.0, MS-SQL)보다 평균적으로 7배 가까이 빨랏습니다.<br/>
+                기간: 2008 ~ 2013<br/>
+                학교: Seoul Hoseo Colleague<br/>
+                전공: Game Development (Multimedia 학사)<br/>
+                기간: 2006 ~ 2008<br/>
+                소개: 게임프로그래밍에 관련된, C, C++, DirectX 및 포토샵, 일러스트레이터, 사운드 포지 등에 대해 배웠습니다.<br/>
+            </p>
+            <span class="subtitle">관심 분야</span>
+            <p class="intro_text">
+                1. SPA(Single Page App)<br/>
+                2. Node.js: <a target="_blank" href="http://nodejs.org/">http://nodejs.org/</a><br/>
+                3. AngularJS: <a target="_blank" href="http://www.angularjs.org/">http://www.angularjs.org/</a><br/>
+                4. MEAN: <a target="_blank" href="http://www.mean.io/">http://www.mean.io/</a><br/>
+                5. MongoDB: <a target="_blank" href="http://www.mongodb.org/">http://www.mongodb.org/</a><br/>
+            </p>
+            <span class="subtitle">추천서</span>
+            <p class="intro_text">
+                1. 자바스크립트 완벽가이드, 저:데이비드 플래너건<br/>
+                2. 더글라스 크락포드의 자바스크립트 핵심가이드, 저:더글라스 크락포드<br/>
+                3. 함수형 자바스크립트 - 새롭고 올바른 자바스크립트 프로그래밍 기법, 저:마이클 포거스<br/>
+                4. 자바스크립트 코딩 기법과 핵심 패턴, 저: 스토얀 스테파노프<br/>
+                5. 제대로 배우는 node.js 프로그래밍, 저:셀리 파워즈<br/>
+            </p>
+            <span class="subtitle">읽고싶은 도서</span>
+            <p class="intro_text">
+                1. Data Structure and algorithm, 저:Mark A. Weiss<br/>
+                2. TCP/IP Illustrated, Vol. 1: The Protocols (Addison-Wesley Professional Computing Series), 저: W. Richard Stevens<br/>
+                3. HTTP: The Definitive Guide (Definitive Guides), 저: David Gourley<br/>
+                4. A First Course in Database System (3rd Edition), 저: Jeffrey D. Ullman<br/>
+                5. Structure and Interpretation of Computer Programs - 2nd Edition (MIT Electrical Engineering and Computer Science, 저: Harold Abelson<br/>
+            </p>
+            <span class="subtitle">참관한 컨퍼런스</span>
+            <p class="intro_text">
+                제목: huJs 2012<br/>
+                일시: 2012년09월10일 ~ 2012년09월12일<br/>
+                장소: 중국 상하이<br/>
+                내용: 중국에서 열린 첫 번째 자바스크립트 컨퍼런스<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KnockoutJS의 개발자 Steven Sanderson, Nodejitsu의 Co-Founder & CEO인 Charile Robbins, 163.com의 Charlie Crane등을 만나봤고 지금도 교류
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;를 하고 있습니다.
+            </p>
+            <span class="subtitle">교육 과정</span>
+            <p class="intro_text">
+                1. 게임프로그램개발 과정(6개월), 삼성 SDS<br/>
+                2. Silverlight 개발 과정(6개월), KOSTA<br/>
+                3. Windows 8 MetroUI App 프로그래밍(5일), KOSTA<br/>
+                4. ASp.NET MVC 4/web Platform프로그래밍(5일), KOSTA<br/>
+                5. ASp.NET SignalR Real-Time/Websocket(5일), KOSTA<br/>
+                6. javascript framework & C# 웹 개발자(5일), KOSTA<br/>
+                7. Single Page Application with Meteor.js and MongoDB(5일), KOSTA<br/>
+                8. Node.js + MongoDB개발자 프로그래밍(14일), KOSTA<br/>
+                9. Node.js + MongoDB개발자 프로그래밍(5일), KOSTA<br/>
+                10. Node.js + MongoDB개발자 프로그래밍(14일), KOSTA<br/>
+                11. BigData MongoDB(NoSQL) + Mongoos 프로그래밍(5일), KOSTA<br/>
+                12. BigData MongoDB(NoSQL) + Mongoos 프로그래밍(14일), KOSTA<br/>
+                13. Node.js, MongoDB, and Backbone/AngularJS/Ember MVC WebApp(5일), KOSTA<br/>
+                14. Building Web Apps with ASp.NET MVC4(5일), KOSTA<br/>
+                15. Node.js + MongoDB개발자 프로그래밍(5일), KOSTA<br/>
+                16. 자바스크립트 기초부터 jQuery까지(14일), KOSTA<br/>
+                17. Single Page Application with Meteor.js and Node.js+MongoDB(5일), KOSTA<br/>
+                18. BigData MongoDB(NoSQL) + Mongoose 프로그래밍(14일), KOSTA<br/>
+                19. BigDataMongoDB(NoSQL) + Mongoos / socket.io realTime(5일), KOSTA<br/>
+                20. Visual Studio2013 javascript design pattern(5일), KOSTA<br/>
+                21. 자바스크립트 & 개발패턴(5일), KOSTA<br/>
+                22. HTML5 - UX & 기술(14일), KOSTA<br/>
+            </p>
+        </div>
     </div>
 </body>
 </html>

@@ -1,4 +1,5 @@
 var http = require('http'),
+    util = require('util'),
     express = require('express'),
     path = require('path'),
     app = express(),
@@ -16,7 +17,7 @@ app.configure(function(){
 });
 
 app.get('/', function(req, res){
-    res.render('qitingting.html');
+    res.render('profile.html');
 });
 
 server.listen(port, function(){
